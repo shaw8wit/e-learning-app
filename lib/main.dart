@@ -1,11 +1,12 @@
-import 'package:elearning/ui/pages/onboarding1.dart';
-import 'package:elearning/ui/pages/undefinedScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:elearning/global/globals.dart' as globals;
-import 'package:elearning/routes/router.dart' as router;
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'global/globals.dart' as globals;
+import 'routes/router.dart' as router;
+import 'ui/pages/onboarding1.dart';
+import 'ui/pages/undefinedScreen.dart';
 
 SharedPreferences prefs;
 void main() {

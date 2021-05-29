@@ -1,7 +1,7 @@
-import 'package:elearning/theme/config.dart' as config;
-import 'package:elearning/ui/widgets/sectionHeader.dart';
-import 'package:elearning/ui/widgets/topBar.dart';
-import 'package:elearning/ui/widgets/videoCard.dart';
+import '../../theme/config.dart' as config;
+import '../widgets/sectionHeader.dart';
+import '../widgets/topBar.dart';
+import '../widgets/videoCard.dart';
 import 'package:flutter/cupertino.dart';
 
 class VideosPage extends StatelessWidget {
@@ -11,7 +11,7 @@ class VideosPage extends StatelessWidget {
   }) : super(key: key);
   final Function onMenuTap;
 
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

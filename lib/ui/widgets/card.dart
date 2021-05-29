@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-
-import 'package:elearning/theme/config.dart';
 import 'package:flutter/material.dart' as material;
+
+import '../../theme/config.dart';
 
 class CardWidget extends StatelessWidget {
   final bool gradient;

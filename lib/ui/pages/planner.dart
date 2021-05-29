@@ -1,11 +1,12 @@
-import 'package:elearning/theme/config.dart' as config;
-import 'package:elearning/ui/widgets/card.dart';
-import 'package:elearning/ui/widgets/sectionHeader.dart';
-import 'package:elearning/ui/widgets/topBar.dart';
-import 'package:elearning/ui/widgets/videoCard.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
 import 'package:flutter/material.dart' as material;
+import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';
+
+import '../../theme/config.dart' as config;
+import '../widgets/card.dart';
+import '../widgets/sectionHeader.dart';
+import '../widgets/topBar.dart';
+import '../widgets/videoCard.dart';
 
 class PlannerPage extends StatelessWidget {
   PlannerPage({
@@ -14,7 +15,7 @@ class PlannerPage extends StatelessWidget {
   }) : super(key: key);
   final Function onMenuTap;
 
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

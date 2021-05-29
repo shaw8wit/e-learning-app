@@ -1,9 +1,9 @@
-import 'package:elearning/analytics/analytics_service.dart';
+import '../analytics/analytics_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:elearning/main.dart' as main;
+import '../main.dart' as main;
 
 class GoogleAuth {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -92,7 +92,7 @@ class GoogleAuth {
   }
 
   Future<bool> isSignedIn() async {
-    await googleSignIn.isSignedIn().then((value) {
+    return await googleSignIn.isSignedIn().then((value) {
       print(value);
       return value;
     });

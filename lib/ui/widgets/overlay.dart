@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:elearning/theme/box_icons_icons.dart';
-import 'package:elearning/ui/widgets/card.dart';
+import '../../theme/box_icons_icons.dart';
+import 'card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 

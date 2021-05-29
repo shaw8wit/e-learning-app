@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:elearning/theme/theme.dart';
+
+import 'theme.dart';
 // import 'package:elearning/main.dart' as main;
 
 enum ThemeType { Light, Dark }

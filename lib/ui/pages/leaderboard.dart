@@ -1,10 +1,11 @@
-import 'package:elearning/theme/config.dart' as config;
-import 'package:elearning/ui/widgets/card.dart';
-import 'package:elearning/ui/widgets/sectionHeader.dart';
-import 'package:elearning/ui/widgets/statsCard.dart';
-import 'package:elearning/ui/widgets/topBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
+
+import '../../theme/config.dart' as config;
+import '../widgets/card.dart';
+import '../widgets/sectionHeader.dart';
+import '../widgets/statsCard.dart';
+import '../widgets/topBar.dart';
 
 class LeaderboardPage extends StatefulWidget {
   LeaderboardPage({

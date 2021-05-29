@@ -1,9 +1,10 @@
-import 'package:elearning/theme/box_icons_icons.dart';
-import 'package:elearning/theme/config.dart';
-import 'package:elearning/ui/pages/video.dart';
-import 'package:elearning/ui/widgets/card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
+
+import '../../theme/box_icons_icons.dart';
+import '../../theme/config.dart';
+import '../pages/video.dart';
+import 'card.dart';
 
 class VideoCard extends material.StatelessWidget {
   final bool long;

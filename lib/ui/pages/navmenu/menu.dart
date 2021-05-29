@@ -1,5 +1,6 @@
-import 'package:elearning/theme/box_icons_icons.dart';
 import 'package:flutter/material.dart';
+
+import '../../../theme/box_icons_icons.dart';
 
 class Menu extends StatelessWidget {
   final Animation<Offset> slideAnimation;

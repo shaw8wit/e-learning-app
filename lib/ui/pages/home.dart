@@ -1,15 +1,17 @@
 import 'dart:ui';
-import 'package:elearning/ui/widgets/overlay.dart';
-import 'package:elearning/theme/box_icons_icons.dart';
-import 'package:elearning/theme/config.dart';
-import 'package:elearning/ui/pages/leaderboard.dart';
-import 'package:elearning/ui/pages/planner.dart';
-import 'package:elearning/ui/pages/videos.dart';
-import 'package:elearning/ui/widgets/sectionHeader.dart';
-import 'package:elearning/ui/widgets/topBar.dart';
-import 'package:elearning/ui/widgets/videoCard.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
+
+import '../../theme/box_icons_icons.dart';
+import '../../theme/config.dart';
+import '../widgets/overlay.dart';
+import '../widgets/sectionHeader.dart';
+import '../widgets/topBar.dart';
+import '../widgets/videoCard.dart';
+import 'leaderboard.dart';
+import 'planner.dart';
+import 'videos.dart';
 
 class Home extends StatefulWidget {
   final onMenuTap;
@@ -47,24 +49,26 @@ class _HomeState extends State<Home> {
             inactiveColor: Color(0xFFADADAD),
             items: [
               BottomNavigationBarItem(
-                  icon: Icon(BoxIcons.bx_home_circle),
-                  title: tabNo == 0 ? Text("Home") : Container()),
+                icon: Icon(BoxIcons.bx_home_circle),
+                label: tabNo == 0 ? "Home" : "",
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(BoxIcons.bx_calendar),
-                  title: tabNo == 1 ? Text("Planner") : Container()),
+                icon: Icon(BoxIcons.bx_calendar),
+                label: tabNo == 1 ? "Planner" : "",
+              ),
               BottomNavigationBarItem(icon: Container()),
               BottomNavigationBarItem(
-                  icon: Icon(BoxIcons.bxs_videos),
-                  title: tabNo == 3 ? Text("Videos") : Container()),
+                icon: Icon(BoxIcons.bxs_videos),
+                label: tabNo == 3 ? "Videos" : "",
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(BoxIcons.bx_stats),
-                  title: tabNo == 4 ? Text("Leaderboard") : Container()),
+                icon: Icon(BoxIcons.bx_stats),
+                label: tabNo == 4 ? "Leaderboard" : "",
+              ),
             ],
           ),
           tabBuilder: (context, index) => (index == 0)
-              ? HomePage(
-                  onMenuTap: widget.onMenuTap,
-                )
+              ? HomePage(onMenuTap: widget.onMenuTap)
               : (index == 1)
                   ? PlannerPage(
                       onMenuTap: widget.onMenuTap,
@@ -136,7 +140,7 @@ class HomePage extends StatelessWidget {
     @required this.onMenuTap,
   }) : super(key: key);
 
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

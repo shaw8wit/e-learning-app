@@ -1,6 +1,7 @@
-import 'package:elearning/theme/box_icons_icons.dart';
-import 'package:elearning/ui/pages/navmenu/menu_dashboard_layout.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../../theme/box_icons_icons.dart';
+import 'navmenu/menu_dashboard_layout.dart';
 
 class Onboarding extends StatefulWidget {
   @override

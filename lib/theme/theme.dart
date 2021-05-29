@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:elearning/theme/config.dart' as config;
+
+import 'config.dart' as config;
 
 var kLightTheme = ThemeData(
   canvasColor: Colors.transparent,
