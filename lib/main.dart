@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'global/globals.dart' as globals;
 import 'routes/router.dart' as router;
-import 'ui/pages/onboarding1.dart';
+import 'ui/pages/onboarding.dart';
 import 'ui/pages/undefinedScreen.dart';
 
 SharedPreferences prefs;
@@ -13,11 +13,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences.getInstance().then((prefs) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-        .then((value) => runApp(
-              RestartWidget(
-                child: MyApp(),
-              ),
-            ));
+        .then((value) => runApp(RestartWidget(child: MyApp())));
   });
 }
 
@@ -42,13 +38,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       onGenerateRoute: router.generateRoute,
       onUnknownRoute: (settings) => CupertinoPageRoute(
-          builder: (context) => UndefinedScreen(
-                name: settings.name,
-              )),
-      // theme: Provider.of<ThemeModel>(context).currentTheme,
+        builder: (context) => UndefinedScreen(name: settings.name),
+      ),
       debugShowCheckedModeBanner: false,
       home: Onboarding(),
     );

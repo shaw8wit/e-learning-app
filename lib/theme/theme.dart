@@ -9,8 +9,6 @@ var kLightTheme = ThemeData(
   accentColor: config.Colors().accentColor(1),
   focusColor: config.Colors().mainColor(1),
   hintColor: config.Colors().secondColor(1),
-  accentTextTheme:
-      TextTheme(headline6: TextStyle(fontFamily: "Red Hat Display")),
   textTheme: TextTheme(
     button: TextStyle(
       fontFamily: 'Red Hat Display',

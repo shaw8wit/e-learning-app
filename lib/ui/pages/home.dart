@@ -152,8 +152,9 @@ class HomePage extends StatelessWidget {
             child: CustomScrollView(
               slivers: <Widget>[
                 SliverFixedExtentList(
-                    delegate: SliverChildListDelegate.fixed([Container()]),
-                    itemExtent: MediaQuery.of(context).size.height * 0.32),
+                  delegate: SliverChildListDelegate.fixed([Container()]),
+                  itemExtent: MediaQuery.of(context).size.height * 0.32,
+                ),
                 SliverToBoxAdapter(
                   child: SectionHeader(
                     text: 'Recommended Lectures',

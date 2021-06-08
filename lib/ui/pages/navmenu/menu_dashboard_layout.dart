@@ -54,7 +54,6 @@ class _MenuDashboardLayoutState extends State<MenuDashboardLayout>
     setState(() {
       _controller.reverse();
     });
-
     isCollapsed = !isCollapsed;
   }
 
@@ -76,10 +75,11 @@ class _MenuDashboardLayoutState extends State<MenuDashboardLayout>
             ),
           ),
           Menu(
-              onMenuTap: onMenuTap,
-              slideAnimation: _slideAnimation,
-              menuAnimation: _menuScaleAnimation,
-              onMenuItemClicked: onMenuItemClicked),
+            onMenuTap: onMenuTap,
+            slideAnimation: _slideAnimation,
+            menuAnimation: _menuScaleAnimation,
+            onMenuItemClicked: onMenuItemClicked,
+          ),
           Dashboard(
             duration: duration,
             onMenuTap: onMenuTap,

@@ -4,14 +4,33 @@ import '../widgets/card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 class VideoPage extends StatefulWidget {
   @override
   _VideoPageState createState() => _VideoPageState();
 }
 
 class _VideoPageState extends State<VideoPage> {
+  YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    _controller = YoutubePlayerController(
+      initialVideoId: 'Vtkv3-endYc',
+      flags: YoutubePlayerFlags(
+        mute: false,
+        autoPlay: true,
+      ),
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return CupertinoPageScaffold(
       backgroundColor: Colors().secondColor(1),
       navigationBar: CupertinoNavigationBar(
@@ -27,7 +46,7 @@ class _VideoPageState extends State<VideoPage> {
         alignment: Alignment.center,
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height,
+            height: height,
             child: SingleChildScrollView(
                 child: Stack(
               alignment: Alignment.center,
@@ -36,12 +55,25 @@ class _VideoPageState extends State<VideoPage> {
                     child: Column(
                   children: <Widget>[
                     Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.5,
-                        child: Image.asset('assets/images/video.jpg',
-                            fit: BoxFit.cover)),
+                      width: width,
+                      height: (3 * width) / 4,
+                      child: YoutubePlayer(
+                        controller: _controller,
+                        showVideoProgressIndicator: true,
+                        progressIndicatorColor:
+                            Color(0xFF03A9F4).withOpacity(0.4),
+                        progressColors: ProgressBarColors(
+                          playedColor: Color(0xFF0396FF).withOpacity(0.7),
+                          handleColor: Color(0xFF0396FF),
+                          bufferedColor: Color(0xFFABDCFF),
+                        ),
+                        onReady: () {
+                          print('Player is ready.');
+                        },
+                      ),
+                    ),
                     Container(
-                      width: MediaQuery.of(context).size.width,
+                      width: width,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
@@ -54,8 +86,9 @@ class _VideoPageState extends State<VideoPage> {
                                   width: 4,
                                   height: 30,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(500),
-                                      color: Color(0xFF343434)),
+                                    borderRadius: BorderRadius.circular(500),
+                                    color: Color(0xFF343434),
+                                  ),
                                   child: Text(""),
                                 ),
                                 Padding(
@@ -63,9 +96,10 @@ class _VideoPageState extends State<VideoPage> {
                                   child: Text(
                                     "Revision - Kinematics",
                                     style: TextStyle(
-                                        color: Color(0xFF343434),
-                                        fontFamily: 'Red Hat Display',
-                                        fontSize: 24),
+                                      color: Color(0xFF343434),
+                                      fontFamily: 'Red Hat Display',
+                                      fontSize: 24,
+                                    ),
                                   ),
                                 )
                               ],
@@ -100,22 +134,26 @@ class _VideoPageState extends State<VideoPage> {
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 8.0),
-                                  child: Icon(BoxIcons.bx_timer,
-                                      size: 20, color: Color(0xFFADADAD)),
+                                  child: Icon(
+                                    BoxIcons.bx_timer,
+                                    size: 20,
+                                    color: Color(0xFFADADAD),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                           Container(
-                              padding: EdgeInsets.all(8),
-                              width: MediaQuery.of(context).size.width * 0.9,
-                              child: Text(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut odio id urna ornare rhoncus. Fusce egestas tellus vitae elit pellentesque, sit amet gravida metus consectetur. Sed in hendrerit elit. Phasellus ullamcorper vulputate ex quis consequat. Aenean fringilla vulputate egestas. Aenean nec mattis turpis. Aenean a faucibus purus, in pulvinar velit. Nulla efficitur erat commodo.",
-                                style: TextStyle(
-                                    color: Color(0xFF343434),
-                                    fontFamily: 'Red Hat Display',
-                                    fontSize: 16),
-                              ))
+                            padding: EdgeInsets.all(8),
+                            width: width * 0.9,
+                            child: Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut odio id urna ornare rhoncus. Fusce egestas tellus vitae elit pellentesque, sit amet gravida metus consectetur. Sed in hendrerit elit. Phasellus ullamcorper vulputate ex quis consequat. Aenean fringilla vulputate egestas. Aenean nec mattis turpis. Aenean a faucibus purus, in pulvinar velit. Nulla efficitur erat commodo.",
+                              style: TextStyle(
+                                  color: Color(0xFF343434),
+                                  fontFamily: 'Red Hat Display',
+                                  fontSize: 16),
+                            ),
+                          )
                         ],
                       ),
                     ),
@@ -123,7 +161,7 @@ class _VideoPageState extends State<VideoPage> {
                 )),
                 Positioned(
                     right: 30,
-                    top: MediaQuery.of(context).size.height * 0.465,
+                    top: (3 * width) / 4 + 50,
                     child: Container(
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
@@ -136,9 +174,10 @@ class _VideoPageState extends State<VideoPage> {
                           ),
                           boxShadow: [
                             BoxShadow(
-                                blurRadius: 25,
-                                color: Color(0xFF03A9F4).withOpacity(0.4),
-                                offset: Offset(0, 4))
+                              blurRadius: 25,
+                              color: Color(0xFF03A9F4).withOpacity(0.4),
+                              offset: Offset(0, 4),
+                            )
                           ],
                           borderRadius: BorderRadius.circular(500)),
                       child: material.FloatingActionButton(
@@ -158,7 +197,7 @@ class _VideoPageState extends State<VideoPage> {
               button: true,
               gradient: true,
               height: 60,
-              width: MediaQuery.of(context).size.width,
+              width: width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
