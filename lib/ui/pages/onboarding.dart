@@ -5,6 +5,7 @@ import '../../theme/box_icons_icons.dart';
 import 'navmenu/menu_dashboard_layout.dart';
 
 class Onboarding extends StatefulWidget {
+  static const routeName = '/onboarding';
   @override
   _OnboardingState createState() => _OnboardingState();
 }
@@ -84,12 +85,8 @@ class _OnboardingState extends State<Onboarding> {
               ],
             ),
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                CupertinoPageRoute(
-                  builder: (context) => MenuDashboardLayout(),
-                ),
-              );
+              Navigator.of(context)
+                  .popAndPushNamed(MenuDashboardLayout.routeName);
             },
           )
         ],
@@ -100,8 +97,8 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     createWidgets();
-    return CupertinoPageScaffold(
-      child: Stack(
+    return Scaffold(
+      body: Stack(
         children: <Widget>[
           Container(
             decoration: BoxDecoration(

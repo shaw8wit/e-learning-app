@@ -46,17 +46,18 @@ class Menu extends StatelessWidget {
           ),
         ),
         Align(
-            alignment: Alignment.topRight,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 28, 10, 0),
-              child: IconButton(
-                icon: Icon(
-                  Icons.close,
-                  color: Colors.white,
-                ),
-                onPressed: onMenuTap,
+          alignment: Alignment.topRight,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 28, 10, 0),
+            child: IconButton(
+              icon: Icon(
+                Icons.close,
+                color: Colors.white,
               ),
-            )),
+              onPressed: onMenuTap,
+            ),
+          ),
+        ),
         SlideTransition(
           position: slideAnimation,
           child: ScaleTransition(
@@ -109,9 +110,7 @@ class Menu extends StatelessWidget {
                         )
                       ],
                     ),
-                    Spacer(
-                      flex: 3,
-                    ),
+                    Spacer(flex: 3),
                     Row(
                       children: <Widget>[
                         Padding(

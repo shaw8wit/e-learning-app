@@ -8,6 +8,7 @@ import 'menu.dart';
 final Color backgroundColor = Colors.lightBlue;
 
 class MenuDashboardLayout extends StatefulWidget {
+  static const routeName = 'menuDashboard';
   @override
   _MenuDashboardLayoutState createState() => _MenuDashboardLayoutState();
 }

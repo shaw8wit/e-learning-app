@@ -1,3 +1,4 @@
+import 'package:elearning/ui/pages/navmenu/menu_dashboard_layout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,12 +40,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateRoute: router.generateRoute,
-      onUnknownRoute: (settings) => CupertinoPageRoute(
-        builder: (context) => UndefinedScreen(name: settings.name),
-      ),
-      debugShowCheckedModeBanner: false,
-      home: Onboarding(),
+      title: 'K-12 Learning App',
+      initialRoute: Onboarding.routeName,
+      routes: {
+        Onboarding.routeName: (ctx) => Onboarding(),
+        MenuDashboardLayout.routeName: (ctx) => MenuDashboardLayout(),
+      },
     );
   }
 }
