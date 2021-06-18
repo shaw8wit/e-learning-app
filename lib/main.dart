@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'global/globals.dart' as globals;
-import 'routes/router.dart' as router;
 import 'ui/pages/onboarding.dart';
 import 'ui/pages/undefinedScreen.dart';
 
@@ -42,6 +41,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'K-12 Learning App',
       initialRoute: Onboarding.routeName,
+      debugShowCheckedModeBanner: false,
       routes: {
         Onboarding.routeName: (ctx) => Onboarding(),
         MenuDashboardLayout.routeName: (ctx) => MenuDashboardLayout(),
