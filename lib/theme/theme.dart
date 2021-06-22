@@ -4,7 +4,7 @@ import 'config.dart' as config;
 
 var kLightTheme = ThemeData(
   canvasColor: Colors.transparent,
-  primaryColor: Colors.white,
+  primaryColor: Colors.black,
   brightness: Brightness.light,
   accentColor: config.Colors().accentColor(1),
   focusColor: config.Colors().mainColor(1),

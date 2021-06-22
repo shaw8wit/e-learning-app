@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
-
+import '../../theme/config.dart' as config;
 import '../../theme/box_icons_icons.dart';
 import '../../theme/config.dart';
 import '../widgets/overlay.dart';
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
                 tabNo = value;
               });
             },
-            activeColor: material.Colors.lightBlue,
+            activeColor: Color(0xFFE100FF),
             inactiveColor: Color(0xFFADADAD),
             items: [
               BottomNavigationBarItem(
@@ -100,18 +100,11 @@ class _HomeState extends State<Home> {
             bottom: 20,
             child: Container(
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xFFABDCFF),
-                      Color(0xFF0396FF),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
+                  gradient: config.Colors().waves,
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 25,
-                        color: Color(0xFF03A9F4).withOpacity(0.4),
+                        color: Color(0xFF7F00FF).withOpacity(0.6),
                         offset: Offset(0, 4))
                   ],
                   borderRadius: BorderRadius.circular(500)),

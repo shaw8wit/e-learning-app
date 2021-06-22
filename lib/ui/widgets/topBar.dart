@@ -64,7 +64,7 @@ class _TopBarState extends State<TopBar> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
             child: CupertinoTextField(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -113,7 +113,7 @@ class _TopBarState extends State<TopBar> {
                     itemCount: 4,
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: const EdgeInsets.fromLTRB(15, 15, 10, 30),
+                        padding: const EdgeInsets.fromLTRB(15, 10, 15, 15),
                         child: CardWidget(
                           gradient: false,
                           button: true,

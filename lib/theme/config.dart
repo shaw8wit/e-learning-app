@@ -44,7 +44,7 @@ class Colors {
   // Color _accentDarkColor = Color(0xFFF0F0F0);
 
   LinearGradient waves = LinearGradient(
-    colors: [Color(0xFF0396FF), Color(0xFFABDCFF)],
+    colors: [Color(0xFF7F00FF), Color(0xFFE100FF)],
     begin: Alignment.bottomRight,
     end: Alignment.topLeft,
   );
