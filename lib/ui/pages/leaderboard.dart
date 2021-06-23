@@ -22,16 +22,16 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
   TextEditingController controller = TextEditingController();
   bool local;
   final List names = [
-    'Sarvesh Mehta',
-    'Karanjeet Gill',
-    'Rahul Bose',
-    'ABCDEF',
-    'ABCDEF',
-    'ABCDEF',
-    'ABCDEF',
-    'ABCDEF',
-    'ABCDEF',
-    'ABCDEF'
+    'Nikhil Singh',
+    'Shouvit Pradhan',
+    'Carp Diem',
+    'Lisa Kudrow',
+    'Ken Adams',
+    'Regina Phalange',
+    'Joey Tribbiani',
+    'Monsferrat',
+    'Duke of London',
+    'Modi'
   ];
 
   final List coins = [
@@ -51,13 +51,13 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
     Color(0xFFFFD700),
     Color(0xFFC0C0C0),
     Color(0xFFCD7F32),
+    Color(0xFFE100FF),
+    Color(0xFFE100FF),
+    Color(0xFFE100FF),
     Color(0xFF0396FF),
     Color(0xFF0396FF),
-    Color(0xFF0396FF),
-    Color(0xFF0396FF),
-    Color(0xFF0396FF),
-    Color(0xFF0396FF),
-    Color(0xFF0396FF)
+    Color(0xFF7F00FF),
+    Color(0xFF7F00FF)
   ];
   @override
   void initState() {
@@ -383,7 +383,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
                     height: 4,
                     duration: Duration(milliseconds: 300),
                     decoration: BoxDecoration(
-                        color: Color(0xFF03A9F4),
+                        color: Color(0xFF7F00FF),
                         borderRadius: BorderRadius.circular(500)),
                   ),
                 )

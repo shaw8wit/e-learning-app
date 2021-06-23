@@ -78,15 +78,14 @@ class _OnboardingState extends State<Onboarding> {
                   style: TextStyle(
                     fontFamily: 'Red Hat Display',
                     fontSize: 16,
-                    color: Color(0xFF0083BE),
+                    color: Color(0xFF7F00FF),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
             ),
             onPressed: () {
-              Navigator.of(context)
-                  .popAndPushNamed(MenuDashboardLayout.routeName);
+              Navigator.of(context).popAndPushNamed(MenuDashboardLayout.routeName);
             },
           )
         ],
@@ -104,8 +103,8 @@ class _OnboardingState extends State<Onboarding> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFFABDCFF),
-                  Color(0xFF0396FF),
+                  Color(0xFF7F00FF),
+                  Color(0xFFE100FF),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,

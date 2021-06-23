@@ -41,11 +41,11 @@ class _VideoPageState extends State<VideoPage> {
     final youtubePlayer = YoutubePlayer(
       controller: _controller,
       showVideoProgressIndicator: true,
-      progressIndicatorColor: Color(0xFF03A9F4).withOpacity(0.4),
+      progressIndicatorColor: Color(0xFF7F00FF).withOpacity(0.4),
       progressColors: ProgressBarColors(
-        playedColor: Color(0xFF0396FF).withOpacity(0.7),
-        handleColor: Color(0xFF0396FF),
-        bufferedColor: Color(0xFFABDCFF),
+        playedColor: Color(0xFF7F00FF).withOpacity(0.7),
+        handleColor: Color(0xFF7F00FF),
+        bufferedColor: Color(0xFFE100FF),
       ),
       onReady: () {
         print('Player is ready.');

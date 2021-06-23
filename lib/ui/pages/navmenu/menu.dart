@@ -84,7 +84,7 @@ class Menu extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Akshay Maurya",
+                                "Shouvit Pradhan",
                                 maxLines: 1,
                                 overflow: TextOverflow.fade,
                                 style: TextStyle(

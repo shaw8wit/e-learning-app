@@ -43,7 +43,7 @@ class _TopBarState extends State<TopBar> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Text(
-                    "Hi, Akshay.",
+                    "Hi, Shouvit!",
                     style: TextStyle(
                         color: Color(0xFF343434),
                         fontSize: 24,
